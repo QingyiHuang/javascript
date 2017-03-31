@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>insert</title>
+	<style></style>
+</head>
+<body>
+	<div class="joinSpan">
+		<p class="ss">1 paragraph</p>
+	</div>
+
+	<script>
+window.onload=function(){
+	var divNeedSpan=document.querySelector('.joinSpan');
+	divNeedSpan.innerHTML='<span>child</span>'
+
+	var spanss = document.createElement('span');
+	spanss.innerHTML='<p style="color:green">hello world</p>';
+
+	divNeedSpan.appendChild(spanss);
+
+	var spanss2 = document.createElement('span');
+	spanss2.innerHTML='<p style="color:blue';
+	var p1= document.querySelector('.joinSpan').getElementsByTagName("p");
+	p1.item(1).innerHTML='im your father';
+}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html</title>
+</head>
+<body>
+	<ol id="test-list">
+	    <li class="lang">Scheme</li>
+	    <li class="lang">JavaScript</li>
+	    <li class="lang">Python</li>
+	    <li class="lang">Ruby</li>
+	    <li class="lang">Haskell</li>
+	</ol>
+</body>
+	<script>
+	//let 只在循环中可见
+window.onload=function(){
+	var arr  = [],
+	    test_list = document.getElementById('test-list'),
+	    child = test_list.children
+
+	for (let i = 0; i < child.length; i++) {
+	    arr.push(child[i].innerText)
+	}
+
+	arr.sort()
+
+	for (let i = 0; i < arr.length; i++) {
+	    child[i].innerText = arr[i]
+	}
+}
+	</script>
+
+</html>

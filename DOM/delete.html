@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="in">
+	<p class="hello">1</p>
+		<p class="hello">2</p>
+			<p class="hello">3</p>
+				<p class="hello">4</p>
+					<p class="hello">5</p>
+</div>
+</body>
+	<script>
+		window.onload=function(){
+			var ins=document.querySelector('#in');
+			ins.removeChild(ins.children[2]);
+		}
+	</script>
+</html>
