@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello</title>
+</head>
+<body>
+	<h4 class="h4c">listening on 3000 port</h4>
+	<input id="bt1" type="button" value="获取a.txt">
+	<script src="./package_ajax.js"></script>
+	<script>
+	window.onload=function(){
+		var bt1 = document.querySelector("#bt1");
+		var h4c = document.querySelector(".h4c")
+		bt1.onclick=function(){
+			ajax('./a.txt',function(info){
+				alert(info)
+			},function(err){
+				alert(err)
+			})
+		};
+
+	};
+	</script>
+</body>
+</html>
